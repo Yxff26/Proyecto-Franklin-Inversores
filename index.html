@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Icono Pagina -->
+    <link rel="shortcut icon" href="assets/img/LOGuitobg.png" type="image/x-icon">
+
+    <!-- Codigo Css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Titulo Pagina -->
+    <title>Franklin Inversores</title>
+
+    <!-- Iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+      <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo"><a href="#"><img src="assets/img/loguitobg.png"></a></li>
+                <input type="checkbox" id="check">
+                <label for="check" class="abrir-menu">
+                  <ion-icon name="grid"></ion-icon>
+                </label>
+                <span class="menu">                 
+                    
+                  <li><a href="#" id="page-item">Inicio</a></li>
+                  <li><a href="html/qsomos.html">Quienes Somos?</a></li>
+                  <li><a href="html/servicios.html">Servicios</a></li>
+                  <li><a href="html/contactos.html">Contactos</a></li>
+
+                </span>
+                <span class="redes">
+                  <li><ion-icon name="logo-instagram" class="brands"></ion-icon></li>
+                  <li><ion-icon name="logo-whatsapp" class="brands"></ion-icon></li>
+                  <li><ion-icon name="logo-facebook" class="brands"></ion-icon></li>
+                </span>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="capaopaca"></div>
+
+    <section class="hero">
+      
+      <div class="content">
+        <h1>Explora Franklin Inversores y los servicios que ofrecemos para ti.</h1>
+        <p>En Franklin Inversores, ofrecemos un servicio completo y profesional en la instalación de sistemas de inversores, cámaras de seguridad y aires acondicionados. Nos especializamos en brindar soluciones eficientes y personalizadas, garantizando el máximo rendimiento y seguridad para su hogar o negocio.</p>
+        <a href="html/qsomos.html" class="cta-btn">Explora más!</a>
+      </div>
+  
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="slide">
+            <div class="slideimg servicio1"></div>
+            <div class="caption">INSTALACION DE CAMARAS DE SEGURIDAD</div>
+          </div>
+          <div class="slide">
+            <div class="slideimg servicio2"></div>
+            <div class="caption">INSTALACION DE AIRES ACONDICIONADOS</div>
+          </div>
+          <div class="slide">
+            <div class="slideimg servicio3"></div>
+            <div class="caption">INSTALACION DE INVERSORES DE CORRIENTE</div>
+          </div>
+          <div class="slide">
+            <div class="slideimg servicio4"></div>
+            <div class="caption">INSTALACION DE ALARMAS DE SEGURIDAD</div>
+          </div>
+          <div class="slide masservicios">
+            <a href="html/servicios.html"><div class="slideimg masser"></div></a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="prev" onclick="moveSlide(-1)"><ion-icon name="chevron-back-outline"></ion-icon></button>
+        <button class="next" onclick="moveSlide(1)"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+      </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: var(--fuente-principal);
+}
+
+:root{
+	--fuente-principal: "Inter";
+	--color-principal: rgba(28, 154, 192, 1);
+	--color-principalhover: rgb(23, 129, 161);
+	--color-light: #fff;
+}
+
+body{
+	background-color: black;
+}
+
+/* CODIGO PC */
+
+/* Header y Navegacion */
+
+.nav-bar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    background-color: transparent;
+    padding: 12px 20px;
+	z-index: 1;
+}
+
+.logo img{
+    width: 60px;
+	margin-top: 15px;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    padding-left: 30px;
+}
+
+.menu li a{
+    padding-bottom: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-light);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#page-item{
+	color:var(--color-principal);
+}
+
+.menu li a:hover{
+	color:var(--color-principal);
+	animation: jello-horizontal 0.9s both;
+}
+
+.redes{
+	display: flex;
+	gap: 1em;
+}
+
+.brands{
+	width: 1.2em;
+	height: 1.2em;
+	color: var(--color-light);
+}
+
+.brands:hover{
+	width: 1.35em;
+	height: 1.35em;
+	transition: all 0.6s ease-in;
+	color: var(--color-principal);
+	cursor: pointer;
+}
+
+.abrir-menu{
+    position: absolute;
+    color: var(--color-light);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.abrir-menu{
+    top: 10px;
+    right: 20px;
+}
+
+#check{
+    display: none;
+}
+
+
+/* Hero */
+
+.hero{
+	width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(assets/img/fondo-index1.png); /* Tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: white;
+  }
+  
+  .capaopaca{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0, 22, 46, .5);
+	position: absolute;
+  }
+
+.content {
+    max-width: 40%;
+	z-index: 1;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+	font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+	font-weight: 300;
+    margin-bottom: 20px;
+  }
+  
+  .cta-btn {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+
+  .cta-btn:hover,
+  .cta-btn:active{
+	background-color: var(--color-principalhover);
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+	width: 400px;
+	height: 405px;
+    min-width: 300px; /* Tamaño fijo para las tarjetas */
+    margin-right: 20px; /* Espacio entre las tarjetas */
+    position: relative;
+	cursor: pointer;
+  }
+
+  .slideimg{
+	width: 100%;
+	height: 375px;
+    border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de card */
+  }
+
+  .servicio1{
+	background-image: url(assets/img/servicio1.png);
+  }
+
+  .servicio2{
+	background-image: url(assets/img/servicio2.png);
+  }
+  
+  .servicio3{
+	background-image: url(assets/img/servicio3.png);
+  }
+
+  .servicio4{
+	background-image: url(assets/img/servicio4.png);
+  }
+
+  .masser{
+	background-image: url(assets/img/masservicios.png);
+  }
+
+  .masservicios:hover{
+	animation: jello-horizontal 0.9s both;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
+	font-weight: 600;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 50px; /* Ajustamos un poco más abajo los controles */
+    left: 53.5%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+  }
+
+  .prev:hover:active, .next:hover:active {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .carousel-container {
+      width: 100%;
+    }
+  
+    .slide {
+      min-width: 200px; /* Reduzco el tamaño de las tarjetas en pantallas más pequeñas */
+    }
+  
+    .prev, .next {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  }
+  
+
+
+
+
+  /* ANIMACIONES */
+@keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  
