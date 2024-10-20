@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Icono Pagina -->
+        <link rel="shortcut icon" href="/assets/img/LOGuitobg.png" type="image/x-icon">
+    
+        <!-- Codigo Css -->
+        <link rel="stylesheet" href="/css/style-form-solicitud.css">
+    
+        <!-- Titulo Pagina -->
+        <title>Franklin Inversores | Solicitud de Servicio</title>
+    
+        <!-- Iconos -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <!-- Inter -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Btn Regresar -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </head>
+<body>
+ 
+    <div class="btn">
+        <ion-icon name="arrow-back-circle-outline" class="btnregresar"></ion-icon>
+    </div>
+
+    <div class="container">
+        <h1>Realizar Solicitud de Servicio</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre del Cliente:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group-direccion">
+                <div class="direccion"><label for="email">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                
+                    <div class="referencias"><label for="descripcion">Referencias de la Dirección</label>
+                        <textarea id="referencias" name="referencias" rows="4" required></textarea>
+                    </div>
+            </div>
+
+            
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="form-group">
+                <label for="servicio">Tipo de Servicio:</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="camaras">Instalación de Cámaras de Seguridad</option>
+                    <option value="aires">Mantenimiento de Aires Acondicionados</option>
+                    <option value="alarmas">Instalación de Sistemas de Alarma</option>
+                    <option value="inversores">Mantenimiento de Inversores</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha Solicitada:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción del Problema/Servicio:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btnregistrar">Registrar Solicitud</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
