@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario, .informacion {
+    width: 48%;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.informacion h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.oficina, .empleos, .presupuesto {
+    margin-bottom: 20px;
+}
+
+.presupuesto {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container-form">
+        <div class="formulario">
+            <h2>Preguntas</h2>
+            <p>Para todo tipo de preguntas, comentarios e inquietudes; por favor llámanos: 914-135-288 o completa el formulario a continuación</p>
+            <form action="#" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="telefono" placeholder="Teléfono">
+                <textarea name="mensaje" placeholder="Déjanos un mensaje ..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="informacion">
+            <div class="oficina">
+                <h3>Oficina Principal</h3>
+                <p>Av. Los Rosales 122,<br>28021, Madrid.</p>
+                <p>Email: info@misitio.com</p>
+                <p>Teléfono: 914-135-288</p>
+                <p>Fax: 914-123-456</p>
+            </div>
+
+            <div class="empleos">
+                <h3>Empleos</h3>
+                <p>Para aplicar a un trabajo en Esfera Construcciones, envía tu CV y carta de recomendación a: <br>info@misitio.com</p>
+            </div>
+
+            <div class="presupuesto">
+                <p><strong>Recibe un presupuesto:</strong> 914-135-288</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

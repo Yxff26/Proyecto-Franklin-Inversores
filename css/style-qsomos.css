@@ -11,6 +11,7 @@
 	--color-principal: rgba(28, 154, 192, 1);
 	--color-principalhover: rgb(23, 129, 161);
 	--color-light: #fff;
+  --titulo: #03045e;
 }
 
 body{
@@ -193,7 +194,7 @@ body{
   font-size: 50px;
   text-transform: uppercase;
   font-weight: 900;
-  
+  color: var(--titulo);
 }
 
 #conocenos{
@@ -240,6 +241,7 @@ body{
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 900;
+  color: var(--titulo);
 }
 
 .titulo-vision{
@@ -247,6 +249,7 @@ body{
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 900;
+  color: var(--titulo);
 }
 
 .contenido-mision-vision{
@@ -263,7 +266,7 @@ body{
   height: 70vh;
   display: flex;
   margin-top: 350px;
-
+  
 }
 .valores-content{
   width: 100%;
@@ -287,6 +290,7 @@ body{
   font-size: 50px;
   text-transform: uppercase;
   font-weight: 900;
+  color: var(--titulo);
 }
 .lista-valores{
   line-height: 2.0;
