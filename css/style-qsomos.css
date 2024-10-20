@@ -43,33 +43,57 @@ body{
 }
 
 .menu{
-    display: flex;
+  display: flex;
 }
 
 .menu li{
-    padding-left: 30px;
+  padding-left: 30px;
+position: relative;
 }
 
 .menu li a{
-    padding-bottom: 5px;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color-light);
-    text-align: center;
-    transition: 0.15s ease-in-out;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 900;
+  padding-bottom: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-light);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* El submenú será visible si haces hover en "Servicios" o en el submenú */
+#servi:hover + .serv-submenu,
+.serv-submenu:hover {
+display: flex;
+animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 #page-item{
-	color:var(--color-principal);
+color:var(--color-principal);
 }
 
 .menu li a:hover{
-	color:var(--color-principal);
-    animation: jello-horizontal 0.9s both;
+color:var(--color-principal);
+animation: jello-horizontal 0.9s both;
 }
+
+.serv-submenu{
+display: none;
+flex-direction: column;
+justify-content: center;
+position: absolute;
+background-color: rgba(0, 22, 46, .5);
+padding: 5px;
+list-style: none;
+top: 100%;
+}
+
+.sub-items{
+margin-left: -25px;
+}
+
 
 .redes{
 	display: flex;
