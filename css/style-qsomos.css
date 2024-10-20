@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	font-family: var(--fuente-principal);
+	  font-family: var(--fuente-principal);
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -110,8 +111,220 @@ body{
 
 
 
+.inicio{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/qsomos.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+}
 
+.capaopaca{
+	width: 100%;
+  height: 100%;
+  background-color: rgba(0, 22, 46, .5);
+  position: absolute;
+  }
 
+ 
+.content-inicio{
+  width: 80%;
+  justify-content: center;
+  position: absolute;
+  top: 250px;
+  left: 12%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.slogan{
+  font-weight: 900;
+  font-size: 50px;
+  text-transform: uppercase;
+  }
+
+.btn-conocenos{
+  padding: 20px 25px;
+  background-color:  var(--color-principal);
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.btn-conocenos:hover{
+  background-color: var(--color-principalhover);
+}
+
+/*PARRAFO DE QUIENES SOMOS*/
+.quienes-somos{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+}
+.quienes-somos-content{
+  width: 80%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.img-quienes-somos{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/quienessomos.png);
+  background-repeat: no-repeat;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.titulo-quienes-somos{
+  margin-top: 80px;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  
+}
+
+#conocenos{
+  text-decoration: none;
+  color: black;
+}
+
+.contenido-quienes-somos{
+  margin-right: 30px;
+  line-height: 2.0;
+  padding-right: 60px;
+  font-weight: 250;
+  font-size: 19px;
+}
+
+/*PARRAFO DE MISION Y VISION*/
+.mision-vision{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+
+}
+.mision-vision-content{
+  width: 60%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 100px;
+}
+
+.img-mision-vision{
+  width: 45%;
+  height: 100vh;
+  background-image: url(/assets/img/quienessomos2.png);
+  background-repeat: no-repeat;
+  margin-top: 250px;
+  margin-left: 800px;
+  position: absolute;
+}
+
+.titulo-mision{
+  margin-top: 250px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.titulo-vision{
+  margin-top: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.contenido-mision-vision{
+  margin-right: 250px;
+  line-height: 2.0;
+  padding-right: 60px;
+  font-weight: 270;
+  font-size: 17px;
+}
+
+/*PARRAFO DE VALORES*/
+.valores{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  margin-top: 350px;
+
+}
+.valores-content{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+}
+
+.img-valores{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/quienessomos3.jpg);
+  background-repeat: no-repeat;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.titulo-valores{
+  margin-top: 80px;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.lista-valores{
+  line-height: 2.0;
+  padding-right: 60px;
+  font-weight: 250;
+  font-size: 20px;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #142b37;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  top: 300px;
+}
+
+footer img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer .social-icons {
+  margin-top: 20px;
+}
+
+footer .social-icons a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
 
 
 /* ANIMACIONES */
