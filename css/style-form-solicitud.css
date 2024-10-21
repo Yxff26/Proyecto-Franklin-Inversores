@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	  font-family: var(--fuente-principal);
+    scroll-behavior: smooth;
+
+}
+
+:root{
+	--fuente-principal: "Inter";
+	--color-principal: rgba(28, 154, 192, 1);
+	--color-principalhover: rgb(23, 129, 161);
+	--color-light: #fff;
+  --titulo: #03045e;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btnregresar{
+    background-color: #03045e;
+    border-radius: 50px;
+    font-size: 45px;
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+.btnregresar:hover{
+    background-color: #050780;
+}
+
+.container {
+    margin-top: 150px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #03045e;
+    border-radius: 5px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-direccion{
+    display: flex;
+    gap: 80px;
+}
+
+.referencias{
+    width: 400px;
+    margin-left: 0px;
+}
+
+.direccion{
+    width: 300px;
+    margin-right: 0px;
+}
+
+.direccion, .referencias{
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="date"] {
+    padding: 8px;
+}
+
+.btnregistrar{
+    font-size: 19px;
+    font-weight: 300;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #03045e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #050780;
+}
+
