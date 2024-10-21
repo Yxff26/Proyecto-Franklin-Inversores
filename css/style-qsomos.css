@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	  font-family: var(--fuente-principal);
+    scroll-behavior: smooth;
+}
+
+:root{
+	--fuente-principal: "Inter";
+	--color-principal: rgba(28, 154, 192, 1);
+	--color-principalhover: rgb(23, 129, 161);
+	--color-light: #fff;
+  --titulo: #03045e;
+}
+
+body{
+	background-color: white;
+}
+
+/* CODIGO PC */
+
+/* Header y Navegacion */
+
+.nav-bar{
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    background-color: rgba(2, 32, 40, 1);
+    padding: 12px 20px;
+	z-index: 1;
+}
+
+.logo img{
+    width: 60px;
+	margin-top: 15px;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    padding-left: 30px;
+}
+
+.menu li a{
+    padding-bottom: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-light);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#page-item{
+	color:var(--color-principal);
+}
+
+.menu li a:hover{
+	color:var(--color-principal);
+    animation: jello-horizontal 0.9s both;
+}
+
+.redes{
+	display: flex;
+	gap: 1em;
+}
+
+.brands{
+	width: 1.2em;
+	height: 1.2em;
+	color: var(--color-light);
+}
+
+.brands:hover{
+	width: 1.35em;
+	height: 1.35em;
+	transition: all 0.6s ease-in;
+	color: var(--color-principal);
+	cursor: pointer;
+}
+
+.abrir-menu{
+    position: absolute;
+    color: var(--color-light);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.abrir-menu{
+    top: 10px;
+    right: 20px;
+}
+
+#check{
+    display: none;
+}
+
+
+
+
+.inicio{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/qsomos.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.capaopaca{
+	width: 100%;
+  height: 100%;
+  background-color: rgba(0, 22, 46, .5);
+  position: absolute;
+  }
+
+ 
+.content-inicio{
+  width: 80%;
+  justify-content: center;
+  position: absolute;
+  top: 250px;
+  left: 12%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.slogan{
+  font-weight: 900;
+  font-size: 50px;
+  text-transform: uppercase;
+  }
+
+.btn-conocenos{
+  padding: 20px 25px;
+  background-color:  var(--color-principal);
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.btn-conocenos:hover{
+  background-color: var(--color-principalhover);
+}
+
+/*PARRAFO DE QUIENES SOMOS*/
+.quienes-somos{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+}
+.quienes-somos-content{
+  width: 80%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.img-quienes-somos{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/quienessomos.png);
+  background-repeat: no-repeat;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.titulo-quienes-somos{
+  margin-top: 80px;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--titulo);
+}
+
+#conocenos{
+  text-decoration: none;
+  color: black;
+}
+
+.contenido-quienes-somos{
+  margin-right: 30px;
+  line-height: 2.0;
+  padding-right: 60px;
+  font-weight: 250;
+  font-size: 19px;
+}
+
+/*PARRAFO DE MISION Y VISION*/
+.mision-vision{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+
+}
+.mision-vision-content{
+  width: 60%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 100px;
+}
+
+.img-mision-vision{
+  width: 45%;
+  height: 100vh;
+  background-image: url(/assets/img/quienessomos2.png);
+  background-repeat: no-repeat;
+  margin-top: 250px;
+  margin-left: 800px;
+  position: absolute;
+}
+
+.titulo-mision{
+  margin-top: 250px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--titulo);
+}
+
+.titulo-vision{
+  margin-top: 50px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--titulo);
+}
+
+.contenido-mision-vision{
+  margin-right: 250px;
+  line-height: 2.0;
+  padding-right: 60px;
+  font-weight: 270;
+  font-size: 17px;
+}
+
+/*PARRAFO DE VALORES*/
+.valores{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  margin-top: 350px;
+  
+}
+.valores-content{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+}
+
+.img-valores{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/img/quienessomos3.jpg);
+  background-repeat: no-repeat;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+
+.titulo-valores{
+  margin-top: 80px;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--titulo);
+}
+.lista-valores{
+  line-height: 2.0;
+  padding-right: 60px;
+  font-weight: 250;
+  font-size: 20px;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #142b37;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  top: 300px;
+}
+
+footer img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer .social-icons {
+  margin-top: 20px;
+}
+
+footer .social-icons a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+/* ANIMACIONES */
+@keyframes jello-horizontal {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
