@@ -9,6 +9,7 @@
 	--fuente-principal: "Inter";
 	--color-principal: rgba(28, 154, 192, 1);
 	--color-principalhover: rgb(23, 129, 161);
+  --menu-r-color:rgba(2, 32, 40, 0.76);
 	--color-light: #fff;
 }
 
@@ -276,26 +277,6 @@ body{
     padding: 12px;
   }
 
-  @media (max-width: 768px) {
-    .content {
-      max-width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .carousel-container {
-      width: 100%;
-    }
-  
-    .slide {
-      min-width: 200px; /* Reduzco el tamaño de las tarjetas en pantallas más pequeñas */
-    }
-  
-    .prev, .next {
-      font-size: 1rem;
-      padding: 8px;
-    }
-  }
   
 
 
@@ -326,3 +307,106 @@ body{
 	  opacity: 1;
 	}
   }
+
+
+/* RESPONSIVE */
+/* Media query para iPhone 12 (390px x 844px) */
+@media only screen and (max-width: 400px) {
+
+  /* menu */
+
+  .nav-bar{
+    width: 100%;
+}
+
+.menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.2s ease-in-out;
+}
+
+.menu li {
+    margin-top: 40px;
+}
+
+.menu li a {
+    padding: 10px;
+}
+
+.abrir-menu{
+    display: block;
+    z-index: 10000;
+}
+
+#check:checked ~ .menu{
+    right: 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    opacity: 1;
+    visibility: visible;
+}
+  
+
+/* Ajustar el Hero */
+.hero {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+}
+
+.content {
+    max-width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.content h1 {
+    font-size: 2rem; /* Reducir el tamaño del título */
+}
+
+.carousel-container {
+    width: 100%;
+}
+
+.slide {
+    min-width: 100px; /* Reducir tamaño de las tarjetas */
+    margin-right: 10px;
+}
+
+.slideimg {
+    height: 150px;
+}
+
+.caption {
+    font-size: 0.7em; /* Ajustar tamaño de texto en las captions */
+}
+
+/* Ajustar los botones */
+.prev, .next {
+    font-size: 1rem;
+    padding: 6px;
+}
+
+/* Ajustes generales */
+.cta-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+}
+
+.carousel-controls {
+    bottom: 20px;
+    left: 50%;
+}
+
+/* Ocultar algunas animaciones para mejorar el rendimiento en móviles */
+.masservicios:hover {
+    animation: none;
+}
+}

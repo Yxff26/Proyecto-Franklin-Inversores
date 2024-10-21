@@ -16,13 +16,24 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
     background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-image: url(/assets/img/imgform.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
+.capaopaca{
+	width: 100%;
+    height: 145vh;
+    background-color: rgba(0, 22, 46, .5);
+	position: absolute;
+  }
 
 .btnregresar{
     background-color: #03045e;
@@ -45,7 +56,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
+    z-index: 1;
+}
+
+.container-form{
+    padding-bottom: 20px;
 }
 
 h1 {
@@ -61,6 +77,7 @@ h1 {
 }
 
 .form-group-direccion{
+    flex-direction: row;
     display: flex;
     gap: 80px;
 }
@@ -76,6 +93,50 @@ h1 {
 }
 
 .direccion, .referencias{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-fechadesc{
+    flex-direction: row;
+    display: flex;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.fechasoli{
+    width: 400px;
+    margin-left: 0px;
+}
+
+.descripcion{
+    width: 500px;
+    margin-right: 0px;
+}
+
+.descripcion, .fechasoli{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-cliente{
+    flex-direction: row;
+    display: flex;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.nombrecliente{
+    width: 300px;
+    margin-left: 0px;
+}
+
+.correocliente{
+    width: 500px;
+    margin-right: 0px;
+}
+
+.nombrecliente, .correocliente{
     display: flex;
     flex-direction: column;
 }

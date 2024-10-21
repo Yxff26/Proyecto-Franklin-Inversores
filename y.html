@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .form-container {
+            width: 90%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #001f7f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003bb5;
+        }
+    </style>
+    <title>Solicitud de Servicio</title>
+</head>
+<body>
+
+<div class="form-container">
+    <!-- Sección Datos del Cliente -->
+    <div class="section">
+        <h2>Datos del Cliente</h2>
+        <label for="nombre">Nombre del Cliente:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="(000)-000-0000" required>
+    </div>
+
+    <!-- Sección Datos de la Dirección -->
+    <div class="section">
+        <h2>Datos de la Dirección</h2>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        
+        <label for="referencias">Referencias de la Dirección:</label>
+        <textarea id="referencias" name="referencias" rows="3"></textarea>
+    </div>
+
+    <!-- Sección Detalles del Servicio -->
+    <div class="section">
+        <h2>Detalles del Servicio</h2>
+        <label for="tipoServicio">Tipo de Servicio:</label>
+        <select id="tipoServicio" name="tipoServicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="instalacion">Instalación</option>
+            <option value="mantenimiento">Mantenimiento</option>
+            <option value="reparacion">Reparación</option>
+        </select>
+
+        <label for="fecha">Fecha Solicitada:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        
+        <label for="descripcion">Descripción del Problema/Servicio:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+    </div>
+
+    <button type="submit">Registrar Solicitud</button>
+</div>
+
+</body>
+</html>

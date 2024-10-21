@@ -29,23 +29,25 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  </head>
 <body>
+    <div class="capaopaca"></div>
  
     <div class="btn">
-        <ion-icon name="arrow-back-circle-outline" class="btnregresar"></ion-icon>
+        <a href="/html/servicios.html"><ion-icon name="arrow-back-circle-outline" class="btnregresar"></ion-icon></a>
     </div>
 
     <div class="container">
+        <div class="container-form">
         <h1>Realizar Solicitud de Servicio</h1>
         <form action="#" method="post">
-            <div class="form-group">
-                <label for="nombre">Nombre del Cliente:</label>
-                <input type="text" id="nombre" name="nombre" required>
+            <div class="form-group-cliente">
+                <div class="nombrecliente"><label for="nombre">Nombre del Cliente:</label>
+                <input type="text" id="nombre" name="nombre" required></div>
+
+                <div class="correocliente"><label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required></div>
             </div>
             
-            <div class="form-group">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+          
             
             <div class="form-group-direccion">
                 <div class="direccion"><label for="email">Dirección</label>
@@ -61,7 +63,7 @@
 
             <div class="form-group">
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="(000)-000-0000" required>
             </div>
 
             <div class="form-group">
@@ -75,20 +77,23 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="fecha">Fecha Solicitada:</label>
-                <input type="date" id="fecha" name="fecha" required>
+            <div class="form-group-fechadesc">
+                <div class="fechasoli"><label for="fecha">Fecha Solicitada:</label>
+                <input type="date" id="fecha" name="fecha" required></div>
+
+                
+                   <div class="descripcion"><label for="descripcion">Descripción del Problema/Servicio:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div> 
             </div>
 
-            <div class="form-group">
-                <label for="descripcion">Descripción del Problema/Servicio:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-            </div>
+            
 
             <div class="form-group">
                 <button type="submit" class="btnregistrar">Registrar Solicitud</button>
             </div>
         </form>
+    </div>
     </div>
     
 </body>
