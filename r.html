@@ -3,201 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Franklin Inversores</title>
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-        /* Estilos básicos */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #4f4f4f;
-        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background-color: #142b37;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
 
-        header nav {
-            margin-top: 10px;
-        }
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 16px;
-        }
+.preguntas, .info {
+    width: 45%;
+}
 
-        h1 {
-            font-size: 2em;
-            margin: 20px 0;
-            text-align: center;
-            color: white;
-        }
+h2, h3 {
+    color: #333;
+}
 
-        /* Estructura de grid */
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
 
-        .card {
-            background-color: #333;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            color: white;
-        }
+form {
+    display: flex;
+    flex-direction: column;
+}
 
-        .card img {
-            width: 100%;
-            height: auto;
-        }
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
 
-        .card-content {
-            padding: 20px;
-        }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
 
-        .card-content h3 {
-            margin-bottom: 10px;
-        }
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
 
-        .card-content p {
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
+button:hover {
+    background-color: #555;
+}
 
-        .btn {
-            background-color: #00b7f1;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.info h3 {
+    margin-top: 20px;
+}
 
-        .btn:hover {
-            background-color: #0095c9;
-        }
+.separator {
+    width: 50px;
+    height: 5px;
+    background-color: #fdd835;
+    margin: 20px 0;
+}
 
-        /* Estilos para el footer */
-        footer {
-            background-color: #142b37;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-        }
-
-        footer img {
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        footer .social-icons {
-            margin-top: 20px;
-        }
-
-        footer .social-icons a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-        }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo.png" alt="Logo Franklin Inversores">
-        <nav>
-            <a href="#">INICIO</a>
-            <a href="#">QUIENES SOMOS?</a>
-            <a href="#">SERVICIOS</a>
-            <a href="#">CONTACTOS</a>
-        </nav>
-    </header>
+<div class="container">
+    <!-- Sección de Preguntas -->
+    <div class="preguntas">
+        <h2>Preguntas</h2>
+        <p>Para todo tipo de preguntas, comentarios e inquietudes, por favor llámanos: 914-135-288 o completa el formulario a continuación</p>
+        
+        <form action="enviar_pregunta.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-    <h1>EXPLORA FRANKLIN INVERSORES Y LOS SERVICIOS QUE OFRECEMOS PARA TI.</h1>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
 
-    <section class="container">
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Instalación de cámaras de seguridad">
-            <div class="card-content">
-                <h3>INSTALACION DE CAMARAS DE SEGURIDAD</h3>
-                <p>Este servicio se destaca por: lorem lorem lorem lorem lorem lorem lorem</p>
-                <a href="#" class="btn">CONOCER MAS</a>
-            </div>
-        </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Instalación de cámaras de seguridad">
-            <div class="card-content">
-                <h3>INSTALACION DE CAMARAS DE SEGURIDAD</h3>
-                <p>Este servicio se destaca por: lorem lorem lorem lorem lorem lorem lorem</p>
-                <a href="#" class="btn">CONOCER MAS</a>
-            </div>
-        </div>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Instalación de cámaras de seguridad">
-            <div class="card-content">
-                <h3>INSTALACION DE CAMARAS DE SEGURIDAD</h3>
-                <p>Este servicio se destaca por: lorem lorem lorem lorem lorem lorem lorem</p>
-                <a href="#" class="btn">CONOCER MAS</a>
-            </div>
-        </div>
+            <label for="mensaje">Déjanos un mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Instalación de cámaras de seguridad">
-            <div class="card-content">
-                <h3>INSTALACION DE CAMARAS DE SEGURIDAD</h3>
-                <p>Este servicio se destaca por: lorem lorem lorem lorem lorem lorem lorem</p>
-                <a href="#" class="btn">CONOCER MAS</a>
-            </div>
-        </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Instalación de cámaras de seguridad">
-            <div class="card-content">
-                <h3>INSTALACION DE CAMARAS DE SEGURIDAD</h3>
-                <p>Este servicio se destaca por: lorem lorem lorem lorem lorem lorem lorem</p>
-                <a href="#" class="btn">CONOCER MAS</a>
-            </div>
-        </div>
+    <!-- Sección de Oficina Principal y Empleos -->
+    <div class="info">
+        <h2>Oficina Principal</h2>
+        <p>Av. Los Rosales 122, 28021, Madrid.</p>
+        <p>Email: info@misitio.com</p>
+        <p>Teléfono: 914-135-288</p>
+        <p>Fax: 914-123-456</p>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Instalación de cámaras de seguridad">
-            <div class="card-content">
-                <h3>INSTALACION DE CAMARAS DE SEGURIDAD</h3>
-                <p>Este servicio se destaca por: lorem lorem lorem lorem lorem lorem lorem</p>
-                <a href="#" class="btn">CONOCER MAS</a>
-            </div>
-        </div>
-    </section>
+        <h3>Empleos</h3>
+        <p>Para aplicar a un trabajo en Esfera Construcciones, envía tu CV y carta de recomendación a: info@misitio.com</p>
 
-    <footer>
-        <img src="logo.png" alt="Logo Franklin Inversores">
-        <p>Franklin Inversores</p>
-        <div class="social-icons">
-            <a href="#">&#xf09a;</a> <!-- Icono de Facebook -->
-            <a href="#">&#xf16d;</a> <!-- Icono de Instagram -->
-            <a href="#">&#xf099;</a> <!-- Icono de Twitter -->
-        </div>
-        <p>Copyright 2024; Designed by Yefry & Lia</p>
-    </footer>
+        <div class="separator"></div>
+
+        <h3>Recibe un presupuesto:</h3>
+        <p>914-135-288</p>
+    </div>
+</div>
 
 </body>
 </html>

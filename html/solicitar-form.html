@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Slider Automático</title>
+    
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.service-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 30px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    left: 0;
+}
+
+.service-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-description h2 {
+    margin-bottom: 10px;
+}
+
+.service-description p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.service-details {
+    text-align: right;
+}
+
+.price h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.price p {
+    font-size: 28px;
+    color: #e67e22;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.request-btn button {
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.request-btn button:hover {
+    background-color: #d35400;
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="service-section">
+        <!-- Slider de imágenes -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="img/servicio1.jpg" alt="Servicio 1">
+                </div>
+                <div class="slide">
+                    <img src="img/servicio2.jpg" alt="Servicio 2">
+                </div>
+                <div class="slide">
+                    <img src="img/servicio3.jpg" alt="Servicio 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Descripción y detalles del servicio -->
+        <div class="service-info">
+            <div class="service-description">
+                <h2>Descripción del Servicio</h2>
+                <p>
+                    Ofrecemos un mantenimiento integral de cámaras de seguridad, cercas eléctricas y aires acondicionados. Nuestro equipo especializado garantiza la correcta instalación y funcionamiento de cada equipo.
+                </p>
+                <p>
+                    Servicio rápido y eficiente con garantía de satisfacción. Ideal para empresas y hogares que buscan soluciones de seguridad confiables.
+                </p>
+            </div>
+            <div class="service-details">
+                <div class="price">
+                    <h3>Costo</h3>
+                    <p>$150.00</p>
+                </div>
+                <div class="request-btn">
+                    <button>Solicitar Servicio</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script>
+    // Slider automático
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+function changeSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+}
+
+// Cambia la imagen cada 5 segundos
+setInterval(changeSlide, 5000);
+
+</script>
+</html>
