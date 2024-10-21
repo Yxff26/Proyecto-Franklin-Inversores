@@ -329,7 +329,7 @@ body{
     top: 0;
     right: -100%;
     z-index: 100;
-    background-color: var(--color2);
+    background-color: var(--menu-r-color);
     transition: all 0.2s ease-in-out;
 }
 
@@ -341,6 +341,27 @@ body{
     padding: 10px;
 }
 
+.redes{
+	display: flex;
+  margin-top: 100px;
+	gap: 1em;
+}
+
+.brands{
+	width: 1.2em;
+	height: 1.2em;
+	color: var(--color-light);
+}
+
+.brands:hover{
+	width: 1.35em;
+	height: 1.35em;
+	transition: all 0.6s ease-in;
+	color: var(--color-principal);
+	cursor: pointer;
+}
+
+
 .abrir-menu{
     display: block;
     z-index: 10000;
@@ -348,7 +369,6 @@ body{
 
 #check:checked ~ .menu{
     right: 0;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     opacity: 1;
     visibility: visible;
 }
@@ -365,6 +385,8 @@ body{
     max-width: 100%;
     text-align: center;
     padding: 10px;
+    margin-top: 100px;
+    z-index: 0;
 }
 
 .content h1 {
@@ -373,15 +395,19 @@ body{
 
 .carousel-container {
     width: 100%;
+    display: flex;
+    gap: 60px;
 }
 
 .slide {
     min-width: 100px; /* Reducir tamaño de las tarjetas */
     margin-right: 10px;
+
 }
 
 .slideimg {
-    height: 150px;
+    width: 300px;
+    height: 270px;
 }
 
 .caption {
