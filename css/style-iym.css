@@ -30,7 +30,7 @@ body{
     list-style: none;
     position: absolute;
     top: 0;
-    background-color: rgba(2, 32, 40, 1);
+    background-color: var(--color-hf);
     padding: 12px 20px;
 	z-index: 1;
 }
@@ -167,12 +167,24 @@ body{
 	background-position: center;
 }
 
-.insta{
-	background-image: url(/assets/img/insta.png);
+.servicio1{
+	background-image: url(/assets/img/servicio1.png);
 }
 
-.mante{
-	background-image: url(/assets/img/mante.png);
+.servicio2{
+	background-image: url(/assets/img/servicio2.png);
+}
+
+.servicio3{
+	background-image: url(/assets/img/servicio3.png);
+}
+
+.servicio4{
+	background-image: url(/assets/img/servicio4.png);
+}
+
+.servicio5{
+	background-image: url(/assets/img/servicio5.png);
 }
 
 .card-content {
