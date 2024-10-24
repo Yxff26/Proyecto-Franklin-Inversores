@@ -12,6 +12,7 @@
 	--color-principalhover: rgb(23, 129, 161);
   --color-hf: rgba(2, 32, 40, 1);
 	--color-light: #fff;
+  --menu-r-color:rgba(2, 32, 40,0.76);
   --titulo: #03045e;
 }
 
@@ -430,65 +431,183 @@ cursor: pointer;
 
   /* RESPONSIVE */
 /* Media query para iPhone 12 (390px x 844px) */
+/* Responsive para pantallas de hasta 400px */
 @media only screen and (max-width: 400px) {
+/* menu */
 
-  /* menu */
+.nav-bar{
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+}
 
-  .nav-bar{
-    width: 100%;
+.scrolled{
+background-color: var(--menu-r-color);
 }
 
 .menu{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: var(--menu-r-color);
-    transition: all 0.2s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 100;
+  background-color: var(--menu-r-color);
+  transition: all 0.2s ease-in-out;
 }
 
 .menu li {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .menu li a {
-    padding: 10px;
+  padding: 10px;
 }
 
 .redes{
-	display: flex;
-  margin-top: 100px;
-	gap: 1em;
+display: flex;
+margin-top: 100px;
+gap: 1em;
 }
 
 .brands{
-	width: 1.2em;
-	height: 1.2em;
-	color: var(--color-light);
+width: 1.2em;
+height: 1.2em;
+color: var(--color-light);
 }
 
 .brands:hover{
-	width: 1.35em;
-	height: 1.35em;
-	transition: all 0.6s ease-in;
-	color: var(--color-principal);
-	cursor: pointer;
+width: 1.35em;
+height: 1.35em;
+transition: all 0.6s ease-in;
+color: var(--color-principal);
+cursor: pointer;
 }
 
 
 .abrir-menu{
-    display: block;
-    z-index: 10000;
+  display: block;
+  z-index: 10000;
 }
 
 #check:checked ~ .menu{
-    right: 0;
-    opacity: 1;
-    visibility: visible;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.img-valores{
+  display: none;
+}
+
+.img-mision-vision{
+  display: none;
+}
+
+.img-quienes-somos{
+  display: none;
+}
+
+.inicio{
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.capaopaca{
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+}
+
+.content-inicio{
+  width: 80%;
+  justify-content: center;
+  position: absolute;
+  top: 150px;
+  left: 12%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.slogan{
+  font-size: 27px;
+}
+
+.btn-conocenos{
+  font-size: 17px;
+}
+
+.btn-conocenos:hover{
+  background-color: var(--color-principalhover);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/*PARRAFO DE QUIENES SOMOS*/
+.quienes-somos{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  margin-left: 10%;
+
+}
+.quienes-somos-content{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+.titulo-quienes-somos{
+  margin-top: 30px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--titulo);
+}
+
+#conocenos{
+  text-decoration: none;
+  color: black;
+}
+
+.contenido-quienes-somos{
+  text-align: center;
+  line-height: 2.0;
+  padding-right: 60px;
+  font-weight: 250;
+  font-size: 19px;
+}
+
+.mision-vision{
+  display: none;
+}
+
+.valores{
+  display: none;
+}
+
+.footer{
+  position: absolute;
+  margin-top: 700px;
 }
 }
