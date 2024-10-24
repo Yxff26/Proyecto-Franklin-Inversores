@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Icono Pagina -->
     <link rel="shortcut icon" href="/assets/img/LOGuitobg.png" type="image/x-icon">
 
@@ -25,7 +27,7 @@
 <body>
       <header>
         <nav>
-            <ul class="nav-bar">
+            <ul class="nav-bar" id="nav-bar">
                 <li class="logo"><a href="#"><img src="/assets/img/loguitobg.png"></a></li>
                 <input type="checkbox" id="check">
                 <label for="check" class="abrir-menu">
@@ -43,18 +45,17 @@
                   </li>
                   <li><a href="#" id="page-item">Contactos</a></li>
 
-                </span>
-                <span class="redes">
+
                   <li><ion-icon name="logo-instagram" class="brands"></ion-icon></li>
                   <li><ion-icon name="logo-whatsapp" class="brands"></ion-icon></li>
-                  <li><ion-icon name="logo-facebook" class="brands"></ion-icon></li>
                 </span>
+
             </ul>
         </nav>
     </header>
       
     <section class="capaopaca"></section>
-
+    <main>
     <section class="inicio">
       <div class="content-inicio">
         <h1 class="slogan">El primer paso hacia la seguridad, comienza aquí</h1>
@@ -75,35 +76,34 @@
 
  <!-- FORMULARIO-PREGUNTAS -->
   <!-- <section class="container"> -->
- <div class="container-form">
-  <div class="formulario">
-      <a href="" id="contactanos"><h2 class="titulo-preguntas">Preguntas</h2></a>
-      <p class="contenido-preguntas">Para todo tipo de preguntas, comentarios e inquietudes; por favor llámanos: 809-757-5031 o completa el formulario a continuación</p>
-      <form action="#" method="POST">
+    <div class="container-form">
+      <div class="formulario">
+        <a href="" id="contactanos"><h2 class="titulo-preguntas">Preguntas</h2></a>
+        <p class="contenido-preguntas">Para todo tipo de preguntas, comentarios e inquietudes; por favor llámanos: 809-757-5031 o completa el formulario a continuación</p>
+        <form action="#" method="POST">
           <input type="text" name="nombre" placeholder="Nombre" required>
           <input type="text" name="apellido" placeholder="Apellido" required>
           <input type="email" name="email" placeholder="Email *" required>
           <input type="tel" name="telefono" placeholder="Teléfono">
           <textarea name="mensaje" placeholder="Déjanos un mensaje ..." required></textarea>
           <button type="submit">Enviar</button>
-      </form>
-    </div>
-
-  <div class="informacion">
-      <div class="oficina">
+        </form>
+      </div>
+    
+      <div class="informacion">
+        <div class="oficina">
           <h2 class="titulo-oficina">Oficina Principal</h2>
           <p>Calle3, Los Jazmines, <br>Santiago de los Caballeros, RD.</p>
           <p>Email: Franklininversores@gmail.com</p>
           <p>Teléfono: 809-757-5031</p>
+        </div>
+    
+        <div class="presupuesto">
+          <h2><strong>Recibe un presupuesto:</strong><br>809-757-5031</h2>
+        </div>
       </div>
-
-            <div class="presupuesto">
-          <h2><strong>Recibe un presupuesto:</strong>
-            <br>
-            809-757-5031</h2>
-      </div>
-  </div>
-</div>
+    </div>
+    
 
 <footer class="footer">
   <div class="footer-logo">
@@ -131,6 +131,7 @@
   <div class="footer-bottom">
       <p>&copy; 2024 Franklin Inversores. Todos los derechos reservados.</p>
   </div>
+</main>
 </footer>
   </body>
 </html>

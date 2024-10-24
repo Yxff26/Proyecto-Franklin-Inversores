@@ -12,8 +12,118 @@
 	--color-principal: rgba(28, 154, 192, 1);
 	--color-principalhover: rgb(23, 129, 161);
   --color-hf: rgba(2, 32, 40, 1);
-	--color-light: #fff;
+	--color-light: #fff;  --menu-r-color:rgba(2, 32, 40,0.76);
   --titulo: #03045e;
+}
+
+/* Header y Navegacion */
+
+.nav-bar{
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  background-color: rgba(2, 32, 40, 1);
+  padding: 12px 20px;
+z-index: 1;
+}
+
+.logo img{
+  width: 60px;
+margin-top: 15px;
+}
+
+.logo a{
+  text-decoration: none;
+}
+.menu{
+display: flex;
+}
+
+.menu li{
+padding-left: 30px;
+position: relative;
+}
+
+.menu li a{
+padding-bottom: 5px;
+display: inline-block;
+text-decoration: none;
+color: var(--color-light);
+text-align: center;
+transition: 0.15s ease-in-out;
+position: relative;
+text-transform: uppercase;
+font-weight: 900;
+}
+
+/* El submenú será visible si haces hover en "Servicios" o en el submenú */
+#servi:hover + .serv-submenu,
+.serv-submenu:hover {
+display: flex;
+animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#page-item{
+color:var(--color-principal);
+}
+
+.menu li a:hover{
+color:var(--color-principal);
+}
+
+.serv-submenu{
+display: none;
+flex-direction: column;
+justify-content: center;
+position: absolute;
+background-color: rgba(0, 22, 46, .5);
+padding: 5px;
+list-style: none;
+top: 100%;
+}
+
+.sub-items{
+margin-left: -25px;
+}
+
+.redes{
+display: flex;
+gap: 1em;
+}
+
+.brands{
+width: 1.2em;
+height: 1.2em;
+color: var(--color-light);
+}
+
+.brands:hover{
+width: 1.35em;
+height: 1.35em;
+transition: all 0.6s ease-in;
+color: var(--color-principal);
+cursor: pointer;
+}
+
+.abrir-menu{
+position: absolute;
+color: var(--color-light);
+cursor: pointer;
+font-size: 1.5rem;
+display: none;
+}
+
+.abrir-menu{
+top: 10px;
+right: 20px;
+}
+
+#check{
+display: none;
 }
 
 .inicio{
@@ -190,119 +300,6 @@ button:hover {
   font-weight: bold;
 }
 
-/* CODIGO PC */
-
-/* Header y Navegacion */
-
-.nav-bar{
-    width: 100%;
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    position: absolute;
-    background-color: rgba(2, 32, 40, 1);
-    padding: 12px 20px;
-	z-index: 1;
-}
-
-.logo img{
-    width: 60px;
-	margin-top: 15px;
-}
-
-.logo a{
-    text-decoration: none;
-}
-.menu{
-  display: flex;
-}
-
-.menu li{
-padding-left: 30px;
-position: relative;
-}
-
-.menu li a{
-  padding-bottom: 5px;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--color-light);
-  text-align: center;
-  transition: 0.15s ease-in-out;
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-
-/* El submenú será visible si haces hover en "Servicios" o en el submenú */
-#servi:hover + .serv-submenu,
-.serv-submenu:hover {
-display: flex;
-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-#page-item{
-color:var(--color-principal);
-}
-
-.menu li a:hover{
-color:var(--color-principal);
-}
-
-.serv-submenu{
-display: none;
-flex-direction: column;
-justify-content: center;
-position: absolute;
-background-color: rgba(0, 22, 46, .5);
-padding: 5px;
-list-style: none;
-top: 100%;
-}
-
-.sub-items{
-margin-left: -25px;
-}
-
-.redes{
-display: flex;
-gap: 1em;
-}
-
-.brands{
-width: 1.2em;
-height: 1.2em;
-color: var(--color-light);
-}
-
-.brands:hover{
-width: 1.35em;
-height: 1.35em;
-transition: all 0.6s ease-in;
-color: var(--color-principal);
-cursor: pointer;
-}
-
-.abrir-menu{
-  position: absolute;
-  color: var(--color-light);
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: none;
-}
-
-.abrir-menu{
-  top: 10px;
-  right: 20px;
-}
-
-#check{
-  display: none;
-}
-
-
 
 /* Estilos para el footer */
 .footer {
@@ -393,3 +390,150 @@ cursor: pointer;
       transform: scale3d(1, 1, 1);
     }
   }
+
+  /* RESPONSIVE */
+/* Media query para iPhone 12 (390px x 844px) */
+/* Responsive para pantallas de hasta 400px */
+@media only screen and (max-width: 400px) {
+  /* menu */
+  
+  .nav-bar{
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+  }
+  
+  .scrolled{
+  background-color: var(--menu-r-color);
+  }
+  
+  .menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--menu-r-color);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .menu li {
+    margin-top: 40px;
+  }
+  
+  .menu li a {
+    padding: 10px;
+  }
+  
+  .redes{
+  display: flex;
+  margin-top: 100px;
+  gap: 1em;
+  }
+  
+  .brands{
+  width: 1.2em;
+  height: 1.2em;
+  color: var(--color-light);
+  }
+  
+  .brands:hover{
+  width: 1.35em;
+  height: 1.35em;
+  transition: all 0.6s ease-in;
+  color: var(--color-principal);
+  cursor: pointer;
+  }
+  
+  
+  .abrir-menu{
+    display: block;
+    z-index: 10000;
+  }
+  
+  #check:checked ~ .menu{
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  main{
+    width: 100%;
+  }
+
+  .inicio{
+    width: 100%;
+    height: 50vh;
+  }
+
+  .capaopaca{
+    height: 50vh;
+  }
+
+  .slogan{
+    font-size: 27px;
+  }
+
+  .content-inicio{
+    margin-top: -30%;
+  }
+
+  .btn-conocenos{
+    font-size: 17px;
+  }
+
+  .titulo-contactos{
+    font-size: 27px;
+  }
+
+  .mapa{
+    height: 70vh;
+  }
+
+
+/*AREA DLE FORM Y CONTACTOS*/
+  .container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .formulario, .informacion {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .formulario form input, .formulario form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .formulario form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .informacion .oficina, .informacion .presupuesto {
+    margin-top: 20px;
+
+  }
+
+  .informacion{
+    margin-right: 100%;
+  }
+  
+ 
+  
+}
