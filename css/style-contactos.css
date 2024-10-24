@@ -458,7 +458,7 @@ button:hover {
   #check:checked ~ .menu{
     right: 0;
     opacity: 1;
-    visibility: visible;
+    visibility:visible;
   }
 
   main{

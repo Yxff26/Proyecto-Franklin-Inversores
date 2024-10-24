@@ -559,74 +559,94 @@ main{
   width: 100%;
 }
 
-/*PARRAFO DE QUIENES SOMOS*/
-.quienes-somos{
+/* PARRAFO DE QUIENES SOMOS */
+.quienes-somos {
   width: 100%;
-  height: 40vh;
+  height: auto; /* Ajustar altura */
   display: flex;
-  margin-left: 10%;
-
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center; /* Centrar el texto */
+  margin-left: 0; /* Evitar que el contenido quede desplazado */
 }
-.quienes-somos-content{
-  width: 100%;
-  height: 70vh;
+
+.quienes-somos-content {
+  width: 90%; /* Hacerlo más flexible */
+  height: auto; /* Ajustar altura */
   display: flex;
   flex-direction: column;
-
+  justify-content: center; /* Centrar contenido */
+  align-items: center;
+  text-align: center; /* Centrar el texto */
+  margin: 20px auto; /* Centrar automáticamente */
 }
 
-.titulo-quienes-somos{
-  margin-top: 30px;
-  font-size: 30px;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: var(--titulo);
-}
-
-#conocenos{
-  text-decoration: none;
-  color: black;
-}
-
-.contenido-quienes-somos{
-  text-align: center;
-  line-height: 2.0;
-  padding-right: 60px;
+.contenido-quienes-somos {
+  text-align: center; /* Centrar texto */
+  line-height: 1.6;
+  padding-right: 0; /* Eliminar padding que desvía el texto */
   font-weight: 250;
   font-size: 19px;
+  margin: 0 auto; /* Centrar párrafo */
 }
 
-/*PARRAFO DE MISION Y VISION*/
-.mision-vision{
+/* PARRAFO DE MISION Y VISION */
+.mision-vision {
   width: 100%;
-  height: 10vh;
+  height: auto; /* Ajustar altura */
   display: flex;
-  margin-top: 130%;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center;
+  margin-top: 100%; /* Ajuste para centrar la posición */
 }
 
-.mision-vision-content{
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-
-}
-
-/*PARRAFO DE VALORES*/
-.valores{
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  margin-top: 800%;
-}
-
-.valores-content{
-  width: 100%;
-  height: 70vh;
+.mision-vision-content {
+  width: 90%; /* Ajustar ancho */
+  height: auto; /* Ajustar altura */
   display: flex;
   flex-direction: column;
-
+  justify-content: center; /* Centrar contenido */
+  align-items: center;
+  text-align: center; /* Centrar texto */
 }
+
+.contenido-mision-vision {
+  margin-right: 0; /* Eliminar margen derecho */
+  padding-right: 0; /* Eliminar padding derecho */
+  line-height: 1.6;
+  font-weight: 270;
+  font-size: 17px;
+  margin: 0 auto; /* Centrar párrafo */
+}
+
+/* PARRAFO DE VALORES */
+.valores {
+  width: 100%;
+  height: auto; /* Ajustar altura */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  text-align: center;
+}
+
+.valores-content {
+  width: 90%; /* Ajustar ancho */
+  height: auto; /* Ajustar altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar contenido */
+  align-items: center;
+  text-align: center; /* Centrar texto */
+}
+
+.lista-valores {
+  line-height: 1.8;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto; /* Centrar párrafo */
+}
+
 
 .footer{
   position: absolute;
