@@ -575,8 +575,6 @@ main{
 
 }
 
-
-
 .titulo-quienes-somos{
   margin-top: 30px;
   font-size: 30px;
@@ -598,12 +596,36 @@ main{
   font-size: 19px;
 }
 
+/*PARRAFO DE MISION Y VISION*/
 .mision-vision{
-  display: none;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  margin-top: 130%;
 }
 
+.mision-vision-content{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/*PARRAFO DE VALORES*/
 .valores{
-  display: none;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  margin-top: 800%;
+}
+
+.valores-content{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .footer{
