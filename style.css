@@ -317,6 +317,11 @@ body{
 
   .nav-bar{
     width: 100%;
+    position: fixed;
+}
+
+.scrolled{
+  background-color: var(--menu-r-color);
 }
 
 .menu{
@@ -339,6 +344,12 @@ body{
 
 .menu li a {
     padding: 10px;
+}
+
+/* El submenú será visible si haces hover en "Servicios" o en el submenú */
+#servi:hover + .serv-submenu,
+.serv-submenu:hover {
+  display: none;
 }
 
 .redes{
@@ -377,7 +388,7 @@ body{
 /* Ajustar el Hero */
 .hero {
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
     height: auto;
 }
 
@@ -385,7 +396,7 @@ body{
     max-width: 100%;
     text-align: center;
     padding: 10px;
-    margin-top: 100px;
+    margin-top: 70px;
     z-index: 0;
 }
 
@@ -396,22 +407,23 @@ body{
 .carousel-container {
     width: 100%;
     display: flex;
-    gap: 60px;
+    padding-left: 15px;
+    margin-top: 30px;
 }
 
-.slide {
-    min-width: 100px; /* Reducir tamaño de las tarjetas */
-    margin-right: 10px;
 
+.slide {
+    min-width: 50px; /* Reducir tamaño de las tarjetas */
 }
 
 .slideimg {
     width: 300px;
-    height: 270px;
+    height: 370px;
 }
 
 .caption {
-    font-size: 0.7em; /* Ajustar tamaño de texto en las captions */
+    font-size: 0.7em; 
+    left: -10%;
 }
 
 /* Ajustar los botones */
@@ -427,8 +439,9 @@ body{
 }
 
 .carousel-controls {
-    bottom: 20px;
+    position: absolute;
     left: 50%;
+    bottom: -16%;
 }
 
 /* Ocultar algunas animaciones para mejorar el rendimiento en móviles */

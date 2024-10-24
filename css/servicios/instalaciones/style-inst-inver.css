@@ -158,3 +158,28 @@ body {
     }
   }
   
+  @media only screen and (max-width: 400px) {
+    .service-section {
+        flex-direction: column;
+    }
+
+    .slider-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-top: 195px; 
+        max-width: 100%;
+    }
+
+    .service-info {
+        align-items: center;
+        text-align: center; /* Centrar el texto y los botones en pantallas pequeñas */
+    }
+
+    .service-details {
+        text-align: center; /* Alinear el costo del servicio al centro */
+    }
+
+    .request-btn {
+        text-align: center; /* Centrar el botón de solicitud */
+    }
+  }

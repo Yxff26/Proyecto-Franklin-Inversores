@@ -37,7 +37,7 @@ body {
 
 .btnregresar{
     background-color: #03045e;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 45px;
     color: white;
     position: absolute;
@@ -178,3 +178,28 @@ button:hover {
     background-color: #050780;
 }
 
+
+@media only screen and (max-width: 400px) {
+    .container{
+        position: relative;
+        top: 25%;
+    }
+
+    .btnregresar{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .form-group-direccion{
+        flex-direction: column;
+    }
+
+    .form-group-fechadesc{
+        flex-direction: column;
+    }
+
+    .form-group-cliente{
+        flex-direction: column;
+    }
+}

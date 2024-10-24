@@ -1,3 +1,6 @@
+
+
+// Cod carousel
 let currentIndex = 0;
 
 function moveSlide(direction) {

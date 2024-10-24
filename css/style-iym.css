@@ -10,6 +10,7 @@
 	--color-principal: rgba(28, 154, 192, 1);
 	--color-principalhover: rgb(23, 129, 161);
     --color-hf: rgba(2, 32, 40, 1);
+    --menu-r-color:rgba(2, 32, 40, 0.76);
 	--color-light: #fff;
 }
 
@@ -280,3 +281,77 @@ body{
 
 /* ANIMACIONES */
 
+@media only screen and (max-width: 400px) {
+
+    /* menu */
+  
+    .nav-bar{
+      width: 100%;
+      position: fixed;
+      background-color: transparent;
+  }
+  
+  .scrolled{
+    background-color: var(--menu-r-color);
+  }
+  
+  .menu{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--menu-r-color);
+      transition: all 0.2s ease-in-out;
+  }
+  
+  .menu li {
+      margin-top: 40px;
+  }
+  
+  .menu li a {
+      padding: 10px;
+  }
+  
+  /* El submenú será visible si haces hover en "Servicios" o en el submenú */
+  #servi:hover + .serv-submenu,
+  .serv-submenu:hover {
+    display: none;
+  }
+  
+  .redes{
+      display: flex;
+    margin-top: 100px;
+      gap: 1em;
+  }
+  
+  .brands{
+      width: 1.2em;
+      height: 1.2em;
+      color: var(--color-light);
+  }
+  
+  .brands:hover{
+      width: 1.35em;
+      height: 1.35em;
+      transition: all 0.6s ease-in;
+      color: var(--color-principal);
+      cursor: pointer;
+  }
+  
+  
+  .abrir-menu{
+      display: block;
+      z-index: 10000;
+  }
+  
+  #check:checked ~ .menu{
+      right: 0;
+      opacity: 1;
+      visibility: visible;
+  }
+}
