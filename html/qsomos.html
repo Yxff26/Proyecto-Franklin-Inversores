@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Icono Pagina -->
     <link rel="shortcut icon" href="/assets/img/LOGuitobg.png" type="image/x-icon">
 
@@ -26,7 +28,7 @@
     <header id="subir">
       <nav>
         
-          <ul class="nav-bar">
+          <ul class="nav-bar" id="nav-bar">
               <li class="logo"><a href="#"><img src="/assets/img/loguitobg.png"></a></li>
               <input type="checkbox" id="check">
               <label for="check" class="abrir-menu">
@@ -43,20 +45,20 @@
                   </ul>
                 </li>
                 <li><a href="contactos.html">Contactos</a></li>
-
+                <span class="redes">
+                  <li><ion-icon name="logo-instagram" class="brands"></ion-icon></li>
+                  <li><ion-icon name="logo-whatsapp" class="brands"></ion-icon></li>
+                  <li><ion-icon name="logo-facebook" class="brands"></ion-icon></li>
+                </span>
               </span>
-              <span class="redes">
-                <li><ion-icon name="logo-instagram" class="brands"></ion-icon></li>
-                <li><ion-icon name="logo-whatsapp" class="brands"></ion-icon></li>
-                <li><ion-icon name="logo-facebook" class="brands"></ion-icon></li>
-              </span>
+              
           </ul>
 
       </nav>
   </header>
 
         <section class="capaopaca"></section>
-
+        <main>
         <section class="inicio">
           <div class="content-inicio">
            <h1 class="slogan">Calidad en cada instalación, eficiencia en cada servicio</h1>
@@ -127,7 +129,7 @@
       </section>    
       
       <a href="#subir"><ion-icon name="caret-up-outline" class="btnsubir"></ion-icon></a>
-
+    </main>
       <footer class="footer">
         <div class="footer-logo">
             <img src="/assets/img/loguitobg.png" alt="Logo de la empresa" class="footer-logo-image">
@@ -155,8 +157,9 @@
             <p>&copy; 2024 Franklin Inversores. Todos los derechos reservados.</p>
         </div>
     </footer>
+    
 </body>
 
-
+<script src="/menuscroll.js"></script>
 
 </html>
